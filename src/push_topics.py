@@ -4,9 +4,8 @@ FCM topic names are case-sensitive, so "legislativeNews" and
 "LegislativeNews" are different topics.
 """
 
-# Keys must match the country values passed to build_push_topic. The app uses
-# us / ca / mx / uk; if the database's country_schema values differ, map them
-# to these keys before calling build_push_topic.
+# FCM topic prefix per country. The app subscribes to "<prefix><Branch>News",
+# with no prefix for the US.
 COUNTRY_PREFIXES = {
     "us": "",
     "ca": "Canada",
@@ -38,7 +37,34 @@ BRANCH_TOPICS = {
 DEFAULT_TOPIC = "GovGlanceNews"
 
 
+def country_code(schema):
+    """Map a country_schema value (or a short code) to us / ca / mx / uk.
+
+    Matches the app's getCountryFromSchema for the four countries the app has
+    notification bells for. Returns None for any other country (for example
+    "australia"), since nobody in the app can be subscribed to its topics.
+    """
+    # Rows hold either a schema name ("united_states_of_america") or a display
+    # name ("United Kingdom", from the news crawler), so spaces and underscores
+    # are treated the same.
+    value = (schema or "us").strip().lower().replace(" ", "_")
+    if value in COUNTRY_PREFIXES:
+        return value
+    if value in ("united_states_of_america", "united_states", "usa"):
+        return "us"
+    if "canada" in value or value.startswith("ca_"):
+        return "ca"
+    if "mexico" in value or value.startswith("mx_"):
+        return "mx"
+    if "united_kingdom" in value or value == "great_britain" or value.startswith("uk_"):
+        return "uk"
+    return None
+
+
 def build_push_topic(branch, country="us"):
-    prefix = COUNTRY_PREFIXES.get((country or "us").strip().lower(), "")
+    """Return the FCM topic for a branch and country, or None if the country has no topics."""
+    code = country_code(country)
+    if code is None:
+        return None
     name = BRANCH_TOPICS.get((branch or "").strip().lower(), DEFAULT_TOPIC)
-    return f"{prefix}{name}"
+    return f"{COUNTRY_PREFIXES[code]}{name}"

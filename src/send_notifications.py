@@ -17,6 +17,7 @@ skipped when live and their rows are kept.
     python send_notifications.py --topic my_test --no-delete   # deliver to a custom test topic
     python send_notifications.py --posts 1 --no-delete         # one post: tap opens the post
     python send_notifications.py --posts 2 --no-delete         # two posts: tap opens the topic page
+    python send_notifications.py --only-topic Executive --posts 3 --no-delete   # one topic only
     python send_notifications.py --live --dry-run              # validate real topic names
     python send_notifications.py --live                        # production
 """
@@ -158,6 +159,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="validate with FCM without delivering or deleting")
     parser.add_argument("--no-delete", action="store_true", help="deliver but keep the rows, so they can be re-sent")
     parser.add_argument("--limit", type=int, default=None, help="only process the first N topics")
+    parser.add_argument("--only-topic", default=None,
+                        help="only process this topic, as stored in notifications.topic (e.g. Executive)")
     parser.add_argument(
         "--posts",
         type=int,
@@ -178,6 +181,9 @@ def main():
     if not isinstance(payload, list):
         log.error("Unexpected response from the notifications API: %r", payload)
         return
+    if args.only_topic:
+        wanted = args.only_topic.strip().lower()
+        payload = [item for item in payload if (item.get("topic") or "").strip().lower() == wanted]
     if args.limit is not None:
         payload = payload[: args.limit]
 

@@ -1,0 +1,4785 @@
+{
+    "generatedAt": "2026-11-11T16:05:39.410Z",
+    "source": "src/utils/feedsConfig.js",
+    "feeds": [
+      {
+        "key": "us:legislative:bills",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "Bills",
+        "kind": "table",
+        "params": "order_by=action_date&schema=united_states_of_america&table=congressional_bills",
+        "schema": "united_states_of_america",
+        "table": "congressional_bills",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:billsEnrolled",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "BillsEnrolled",
+        "kind": "table",
+        "params": "order_by=date_issued&schema=united_states_of_america&table=congressional_bills_enrolled",
+        "schema": "united_states_of_america",
+        "table": "congressional_bills_enrolled",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:newLaws",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "Laws",
+        "kind": "table",
+        "params": "order_by=date_issued&schema=united_states_of_america&table=public_and_private_laws",
+        "schema": "united_states_of_america",
+        "table": "public_and_private_laws",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:congressionalReports",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "Congressional Reports",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=congressional_reports",
+        "schema": "united_states_of_america",
+        "table": "congressional_reports",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:congressionalHearings",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "Hearings",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=congressional_hearings",
+        "schema": "united_states_of_america",
+        "table": "congressional_hearings",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:gaoReports",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "GAOReports",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=government_accountability_office_reports",
+        "schema": "united_states_of_america",
+        "table": "government_accountability_office_reports",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:houseFloor",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "House Floor Activity",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=house_floor_activity",
+        "schema": "united_states_of_america",
+        "table": "house_floor_activity",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:houseCommitteeAgri",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "House Agriculture Committee",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=committee_on_agriculture_meeting_feed",
+        "schema": "united_states_of_america",
+        "table": "committee_on_agriculture_meeting_feed",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:houseCommitteeArmed",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "House Armed Services Committee",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=committee_on_armed_services_meeting_feed",
+        "schema": "united_states_of_america",
+        "table": "committee_on_armed_services_meeting_feed",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:houseCommitteeFinancial",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "House Financial Services Committee",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=committee_on_financial_services_meeting_feed",
+        "schema": "united_states_of_america",
+        "table": "committee_on_financial_services_meeting_feed",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:houseCommitteeJudiciary",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "House Judiciary Committee",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=committee_on_the_judiciary_meeting_feed",
+        "schema": "united_states_of_america",
+        "table": "committee_on_the_judiciary_meeting_feed",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:houseCommitteeForeign",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "House Foreign Affairs Committee",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=committee_on_foreign_affairs_meeting_feed",
+        "schema": "united_states_of_america",
+        "table": "committee_on_foreign_affairs_meeting_feed",
+        "filters": []
+      },
+      {
+        "key": "us:legislative:senateCommitteeArmed",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "Senate Armed Services Committee",
+        "kind": "table",
+        "params": "filter_column=committee&filter_string=Committee+on+Armed+Services&order_by=created_at&schema=united_states_of_america&table=senate_committee_news",
+        "schema": "united_states_of_america",
+        "table": "senate_committee_news",
+        "filters": [
+          {
+            "column": "committee",
+            "value": "Committee on Armed Services"
+          }
+        ]
+      },
+      {
+        "key": "us:legislative:senateCommitteeFinance",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "Senate Finance Committee",
+        "kind": "table",
+        "params": "filter_column=committee&filter_string=Committee+on+Finance&order_by=created_at&schema=united_states_of_america&table=senate_committee_news",
+        "schema": "united_states_of_america",
+        "table": "senate_committee_news",
+        "filters": [
+          {
+            "column": "committee",
+            "value": "Committee on Finance"
+          }
+        ]
+      },
+      {
+        "key": "us:legislative:senateCommitteeJudiciary",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "Senate Judiciary Committee",
+        "kind": "table",
+        "params": "filter_column=committee&filter_string=Committee+on+the+Judiciary&order_by=created_at&schema=united_states_of_america&table=senate_committee_news",
+        "schema": "united_states_of_america",
+        "table": "senate_committee_news",
+        "filters": [
+          {
+            "column": "committee",
+            "value": "Committee on the Judiciary"
+          }
+        ]
+      },
+      {
+        "key": "us:legislative:senateCommitteeForeign",
+        "country": "us",
+        "section": "legislative",
+        "topic": "Legislative",
+        "topicName": "LegislativeNews",
+        "name": "Senate Foreign Relations Committee",
+        "kind": "table",
+        "params": "filter_column=committee&filter_string=Committee+on+Foreign+Relations&order_by=created_at&schema=united_states_of_america&table=senate_committee_news",
+        "schema": "united_states_of_america",
+        "table": "senate_committee_news",
+        "filters": [
+          {
+            "column": "committee",
+            "value": "Committee on Foreign Relations"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:wh",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "White House Briefing Room",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=the_white_house",
+        "schema": "united_states_of_america",
+        "table": "the_white_house",
+        "filters": []
+      },
+      {
+        "key": "us:executive:pa",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Presidential Actions",
+        "kind": "table",
+        "params": "filter_column=category&filter_string=Presidential+Actions&order_by=created_at&schema=united_states_of_america&table=the_white_house",
+        "schema": "united_states_of_america",
+        "table": "the_white_house",
+        "filters": [
+          {
+            "column": "category",
+            "value": "Presidential Actions"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:whdocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Presidential Documents",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=compilation_of_presidential_documents",
+        "schema": "united_states_of_america",
+        "table": "compilation_of_presidential_documents",
+        "filters": []
+      },
+      {
+        "key": "us:executive:stateDepartment2",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of State News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=state",
+        "schema": "united_states_of_america",
+        "table": "state",
+        "filters": []
+      },
+      {
+        "key": "us:executive:frState",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of State Documents",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Department+of+State+Documents&order_by=created_at&schema=united_states_of_america&table=state",
+        "schema": "united_states_of_america",
+        "table": "state",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Department of State Documents"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:treasuryDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Treasury News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": []
+      },
+      {
+        "key": "us:executive:treasuryDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Treasury Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Treasury+Department&order_by=created_at&schema=united_states_of_america&table=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Treasury Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:defenseDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Defense News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": []
+      },
+      {
+        "key": "us:executive:frDefense",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Defense Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Defense+Department&order_by=created_at&schema=united_states_of_america&table=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Defense Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:armyDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Army Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Army+Department&order_by=created_at&schema=united_states_of_america&table=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Army Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:navyDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Navy Documents",
+        "kind": "agency",
+        "params": "agency=Navy+Department&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Navy Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:justiceNews",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Justice News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": []
+      },
+      {
+        "key": "us:executive:justiceDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Justice Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Justice+Department&order_by=created_at&schema=united_states_of_america&table=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Justice Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:transDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Transportation Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Transportation+Department&order_by=created_at&schema=united_states_of_america&table=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Transportation Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:spaceDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Commercial Space Transportation Office",
+        "kind": "agency",
+        "params": "agency=Commercial+Space+Transportation+Office&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Commercial Space Transportation Office"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:theInteriorDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of the Interior News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=department_of_interior_news",
+        "schema": "united_states_of_america",
+        "table": "department_of_interior_news",
+        "filters": []
+      },
+      {
+        "key": "us:executive:interiorDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of the Interior Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Interior+Department&order_by=created_at&schema=united_states_of_america&table=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Interior Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:agricultureDepartment5",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Agriculture News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=environment",
+        "schema": "united_states_of_america",
+        "table": "environment",
+        "filters": []
+      },
+      {
+        "key": "us:executive:agDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Agriculture Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Department+of+Agriculture&order_by=created_at&schema=united_states_of_america&table=environment",
+        "schema": "united_states_of_america",
+        "table": "environment",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Department of Agriculture"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:commerceDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Commerce News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": []
+      },
+      {
+        "key": "us:executive:commerceDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Commerce Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Commerce+Department&order_by=created_at&schema=united_states_of_america&table=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Commerce Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:censusBureau",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Census Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Census+Bureau&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Census Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:economicAnalysis",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Economic Analysis Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Economic+Analysis+Bureau&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Economic Analysis Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:laborDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Labor News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=labor",
+        "schema": "united_states_of_america",
+        "table": "labor",
+        "filters": []
+      },
+      {
+        "key": "us:executive:laborDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Labor Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Labor+Department&order_by=created_at&schema=united_states_of_america&table=labor",
+        "schema": "united_states_of_america",
+        "table": "labor",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Labor Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:healthAndHumanServicesDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Health and Human Services News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": []
+      },
+      {
+        "key": "us:executive:healthDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Health and Human Services Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Health+and+Human+Services+Department&order_by=created_at&schema=united_states_of_america&table=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Health and Human Services Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:housingAndUrbanDevelopmentDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Housing and Urban Development News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=housing_and_urban_development",
+        "schema": "united_states_of_america",
+        "table": "housing_and_urban_development",
+        "filters": []
+      },
+      {
+        "key": "us:executive:housingDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Housing and Urban Development Documents",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Department+of+Housing+And+Urban+Development+Documents&order_by=created_at&schema=united_states_of_america&table=housing_and_urban_development",
+        "schema": "united_states_of_america",
+        "table": "housing_and_urban_development",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Department of Housing And Urban Development Documents"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:eduNews",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Education News",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Department+of+Education+Press+Release&order_by=created_at&schema=united_states_of_america&table=education",
+        "schema": "united_states_of_america",
+        "table": "education",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Department of Education Press Release"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:eduDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Education Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Education+Department&order_by=created_at&schema=united_states_of_america&table=education",
+        "schema": "united_states_of_america",
+        "table": "education",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Education Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:energyNews",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Energy News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": []
+      },
+      {
+        "key": "us:executive:energyDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Energy Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Energy+Department&order_by=created_at&schema=united_states_of_america&table=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Energy Department"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:energyInfo",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Energy Information Administration",
+        "kind": "agency",
+        "params": "agency=Energy+Information+Administration&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Energy Information Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:energyReg",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Federal Energy Regulatory Commission",
+        "kind": "agency",
+        "params": "agency=Federal+Energy+Regulatory+Commission&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Energy Regulatory Commission"
+          }
+        ]
+      },
+      {
+        "key": "us:executive:veteransAffairsDepartment",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Veterans' Affairs News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=veterans_affairs_news",
+        "schema": "united_states_of_america",
+        "table": "veterans_affairs_news",
+        "filters": []
+      },
+      {
+        "key": "us:executive:homelandDocs",
+        "country": "us",
+        "section": "executive",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Department of Homeland Security Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Homeland+Security+Department&order_by=created_at&schema=united_states_of_america&table=homeland_security",
+        "schema": "united_states_of_america",
+        "table": "homeland_security",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Homeland Security Department"
+          }
+        ]
+      },
+      {
+        "key": "us:whitehouse:presidentialProclamations",
+        "country": "us",
+        "section": "whitehouse",
+        "topic": "Executive",
+        "topicName": "ExecutiveNews",
+        "name": "Presidential Proclamations",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=presidential_proclamation",
+        "schema": "united_states_of_america",
+        "table": "presidential_proclamation",
+        "filters": []
+      },
+      {
+        "key": "us:judicial:courtNews",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "CourtNews",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=uscourts",
+        "schema": "united_states_of_america",
+        "table": "uscourts",
+        "filters": []
+      },
+      {
+        "key": "us:judicial:supremeCourtOpinions",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Supreme Court Opinions",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=supreme_court_opinions",
+        "schema": "united_states_of_america",
+        "table": "supreme_court_opinions",
+        "filters": []
+      },
+      {
+        "key": "us:judicial:supremeCourtArguments",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Supreme Court Arguments",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=supreme_court_arguments",
+        "schema": "united_states_of_america",
+        "table": "supreme_court_arguments",
+        "filters": []
+      },
+      {
+        "key": "us:judicial:internationalTradeCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "U.S. Court of International Trade",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=US+Court+of+International+Trade&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "US Court of International Trade"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:federalCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Federal Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Thirteenth+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Thirteenth Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:firstCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the First Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+First+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the First Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:secondCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Second Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Second+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Second Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:thirdCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Third Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Third+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Third Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:fourthCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Fourth Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Fourth+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Fourth Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:fifthCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Fifth Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Fifth+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Fifth Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:sixthCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Sixth Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Sixth+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Sixth Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:seventhCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Seventh Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Seventh+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Seventh Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:eighthCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Eighth Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Eighth+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Eighth Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ninthCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Ninth Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Ninth+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Ninth Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:tenthCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Tenth Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Tenth+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Tenth Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:eleventhCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the Eleventh Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+Eleventh+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the Eleventh Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:dcCircuit",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "Court of Appeals for the District of Columbia Circuit",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Court+of+Appeals+for+the+District+of+Columbia+Circuit&order_by=created_at&schema=united_states_of_america&table=court_of_appeals",
+        "schema": "united_states_of_america",
+        "table": "court_of_appeals",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Court of Appeals for the District of Columbia Circuit"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:alndDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of Alabama",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+Alabama&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of Alabama"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:alsdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Southern District of Alabama",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Southern+District+of+Alabama&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Southern District of Alabama"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:almdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Middle District of Alabama",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Middle+District+of+Alabama&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Middle District of Alabama"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:akdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Alaska",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Alaska&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Alaska"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:azdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Arizona",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Arizona&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Arizona"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:aredDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of Arkansas",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+Arkansas&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of Arkansas"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:caedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of California",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+California&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of California"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:candDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of California",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+California&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of California"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:casdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Southern District of California",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Southern+District+of+California&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Southern District of California"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:codDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Colorado",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Colorado&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Colorado"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ctdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Connecticut",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Connecticut&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Connecticut"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:dcdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Columbia",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Columbia&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Columbia"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:dedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Delaware",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Delaware&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Delaware"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:flsdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Southern District of Florida",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Southern+District+of+Florida&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Southern District of Florida"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:flndDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of Florida",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+Florida&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of Florida"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:gamdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Middle District of Georgia",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Middle+District+of+Georgia&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Middle District of Georgia"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:gandDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of Georgia",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+Georgia&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of Georgia"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:gudDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Guam",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Guam&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Guam"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:hidDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Hawaii",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Hawaii&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Hawaii"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:iddDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Idaho",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Idaho&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Idaho"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ilndDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of Illinois",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+Illinois&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of Illinois"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ilsdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Southern District of Illinois",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Southern+District+of+Illinois&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Southern District of Illinois"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:insdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Southern District of Indiana",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Southern+District+of+Indiana&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Southern District of Indiana"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:iandDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of Iowa",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+Iowa&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of Iowa"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ksdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Kansas",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Kansas&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Kansas"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:kyedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of Kentucky",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+Kentucky&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of Kentucky"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:kywdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Western District of Kentucky",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Western+District+of+Kentucky&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Western District of Kentucky"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:laedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of Louisiana",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+Louisiana&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of Louisiana"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:lamdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Middle District of Louisiana",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Middle+District+of+Louisiana&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Middle District of Louisiana"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:medDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Maine",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Maine&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Maine"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:mddDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Maryland",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Maryland&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Maryland"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:madDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Massachusetts",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Massachusetts&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Massachusetts"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:miedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of Michigan",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+Michigan&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of Michigan"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:miwdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Western District of Michigan",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Western+District+of+Michigan&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Western District of Michigan"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:mndDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Minnesota",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Minnesota&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Minnesota"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:moedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of Missouri",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+Missouri&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of Missouri"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:mowdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Western District of Missouri",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Western+District+of+Missouri&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Western District of Missouri"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:mtdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Montana",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Montana&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Montana"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:nedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Nebraska",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Nebraska&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Nebraska"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:nhdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of New Hampshire",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+New+Hampshire&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of New Hampshire"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:njdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of New Jersey",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+New+Jersey&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of New Jersey"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:nmdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of New Mexico",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+New+Mexico&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of New Mexico"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:nyedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of New York",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+New+York&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of New York"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:nyndDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of New York",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+New+York&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of New York"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ncmdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Middle District of North Carolina",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Middle+District+of+North+Carolina&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Middle District of North Carolina"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:nddDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of North Dakota",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+North+Dakota&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of North Dakota"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:nmidDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Northern Mariana Islands",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Northern+Mariana+Islands&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Northern Mariana Islands"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ohndDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of Ohio",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+Ohio&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of Ohio"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ohsdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Southern District of Ohio",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Southern+District+of+Ohio&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Southern District of Ohio"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:okedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of Oklahoma",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+Oklahoma&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of Oklahoma"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:okwdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Western District of Oklahoma",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Western+District+of+Oklahoma&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Western District of Oklahoma"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ordDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Oregon",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Oregon&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Oregon"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:paedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of Pennsylvania",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+Pennsylvania&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of Pennsylvania"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:pamdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Middle District of Pennsylvania",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Middle+District+of+Pennsylvania&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Middle District of Pennsylvania"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:pawdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Western District of Pennsylvania",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Western+District+of+Pennsylvania&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Western District of Pennsylvania"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:prdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Puerto Rico",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Puerto+Rico&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Puerto Rico"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:ridDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Rhode Island",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Rhode+Island&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Rhode Island"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:sddDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of South Dakota",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+South+Dakota&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of South Dakota"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:tnedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of Tennessee",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+Tennessee&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of Tennessee"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:tnwdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Western District of Tennessee",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Western+District+of+Tennessee&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Western District of Tennessee"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:tnmdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Middle District of Tennessee",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Middle+District+of+Tennessee&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Middle District of Tennessee"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:txndDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of Texas",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+Texas&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of Texas"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:txsdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Southern District of Texas",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Southern+District+of+Texas&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Southern District of Texas"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:txwdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Western District of Texas",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Western+District+of+Texas&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Western District of Texas"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:utdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Utah",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Utah&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Utah"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:vtdDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Vermont",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Vermont&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Vermont"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:waedDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Eastern District of Washington",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Eastern+District+of+Washington&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Eastern District of Washington"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:wvndDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court Northern District of West Virginia",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+Northern+District+of+West+Virginia&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court Northern District of West Virginia"
+          }
+        ]
+      },
+      {
+        "key": "us:judicial:wydDistrictCourt",
+        "country": "us",
+        "section": "judicial",
+        "topic": "Judicial",
+        "topicName": "JudicialNews",
+        "name": "District Court District of Wyoming",
+        "kind": "table",
+        "params": "filter_column=feed_title&filter_string=District+Court+District+of+Wyoming&order_by=created_at&schema=united_states_of_america&table=state_judicial_publications",
+        "schema": "united_states_of_america",
+        "table": "state_judicial_publications",
+        "filters": [
+          {
+            "column": "feed_title",
+            "value": "District Court District of Wyoming"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:defenseDepartmentNews",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Department of Defense News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": []
+      },
+      {
+        "key": "us:defense:defenseDepartmentDocuments",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Department of Defense Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Defense+Department&order_by=created_at&schema=united_states_of_america&table=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Defense Department"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:armyDocuments",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Army Documents",
+        "kind": "agency",
+        "params": "agency=Army+Department&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Army Department"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:navyDocuments",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Navy Documents",
+        "kind": "agency",
+        "params": "agency=Navy+Department&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Navy Department"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:airForceDocuments",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Air Force Documents",
+        "kind": "agency",
+        "params": "agency=Air+Force+Department&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Air Force Department"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:defenseAcquisition",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Defense Acquisition Regulations System",
+        "kind": "agency",
+        "params": "agency=Defense+Acquisition+Regulations+System&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Defense Acquisition Regulations System"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:defenseContract",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Defense Contract Audit Agency",
+        "kind": "agency",
+        "params": "agency=Defense+Contract+Audit+Agency&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Defense Contract Audit Agency"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:disaDocuments",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Defense Information Systems Agency",
+        "kind": "agency",
+        "params": "agency=Defense+Information+Systems+Agency&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Defense Information Systems Agency"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:diaDocuments",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Defense Intelligence Agency",
+        "kind": "agency",
+        "params": "agency=Defense+Intelligence+Agency&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Defense Intelligence Agency"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:dlaDocuments",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Defense Logistics Agency",
+        "kind": "agency",
+        "params": "agency=Defense+Logistics+Agency&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Defense Logistics Agency"
+          }
+        ]
+      },
+      {
+        "key": "us:defense:engineersCorps",
+        "country": "us",
+        "section": "defense",
+        "topic": "Defense",
+        "topicName": "DefenseNews",
+        "name": "Engineers Corps",
+        "kind": "agency",
+        "params": "agency=Engineers+Corps&table_name=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Engineers Corps"
+          }
+        ]
+      },
+      {
+        "key": "us:elections:federalElectionCommission",
+        "country": "us",
+        "section": "elections",
+        "topic": "Elections",
+        "topicName": "ElectionNews",
+        "name": "Federal Election Commission",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=federal_election_commission",
+        "schema": "united_states_of_america",
+        "table": "federal_election_commission",
+        "filters": []
+      },
+      {
+        "key": "us:elections:electionAssistanceCommission",
+        "country": "us",
+        "section": "elections",
+        "topic": "Elections",
+        "topicName": "ElectionNews",
+        "name": "Election Assistance Commission",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=election_assistance_commission",
+        "schema": "united_states_of_america",
+        "table": "election_assistance_commission",
+        "filters": []
+      },
+      {
+        "key": "us:economy:gdpUpdates",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "GDP Updates",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=gdp",
+        "schema": "united_states_of_america",
+        "table": "gdp",
+        "filters": []
+      },
+      {
+        "key": "us:economy:inflationUpdates",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Inflation Updates",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=inflation_updates",
+        "schema": "united_states_of_america",
+        "table": "inflation_updates",
+        "filters": []
+      },
+      {
+        "key": "us:economy:wageGrowth",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Wage Growth",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=wage_growth",
+        "schema": "united_states_of_america",
+        "table": "wage_growth",
+        "filters": []
+      },
+      {
+        "key": "us:economy:secPressReleases",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "SEC Press Releases",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=sec_updates",
+        "schema": "united_states_of_america",
+        "table": "sec_updates",
+        "filters": []
+      },
+      {
+        "key": "us:economy:secSpeechesStatements",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "SEC Speeches and Statements",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=sec_speeches_statements",
+        "schema": "united_states_of_america",
+        "table": "sec_speeches_statements",
+        "filters": []
+      },
+      {
+        "key": "us:economy:federalReserveSpeeches",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Federal Reserve Speeches & Testimony",
+        "kind": "table",
+        "params": "filter_column=media_type&filter_string=Speeches+%26+Testimony&order_by=created_at&schema=united_states_of_america&table=federal_reserve",
+        "schema": "united_states_of_america",
+        "table": "federal_reserve",
+        "filters": [
+          {
+            "column": "media_type",
+            "value": "Speeches & Testimony"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:federalReserveResearchPapers",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Federal Reserve Research Papers",
+        "kind": "table",
+        "params": "filter_column=media_type&filter_string=Research+Paper+Feeds&order_by=created_at&schema=united_states_of_america&table=federal_reserve",
+        "schema": "united_states_of_america",
+        "table": "federal_reserve",
+        "filters": [
+          {
+            "column": "media_type",
+            "value": "Research Paper Feeds"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:federalReserveOthers",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Federal Reserve Others",
+        "kind": "table",
+        "params": "filter_column=media_type&filter_string=Other&order_by=created_at&schema=united_states_of_america&table=federal_reserve",
+        "schema": "united_states_of_america",
+        "table": "federal_reserve",
+        "filters": [
+          {
+            "column": "media_type",
+            "value": "Other"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:federalReserveAnnouncements",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Federal Reserve Announcements",
+        "kind": "table",
+        "params": "filter_column=media_type&filter_string=Announcements&order_by=created_at&schema=united_states_of_america&table=federal_reserve",
+        "schema": "united_states_of_america",
+        "table": "federal_reserve",
+        "filters": [
+          {
+            "column": "media_type",
+            "value": "Announcements"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:commerceNews",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Department of Commerce News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": []
+      },
+      {
+        "key": "us:economy:commerceDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Department of Commerce Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Commerce+Department&order_by=created_at&schema=united_states_of_america&table=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Commerce Department"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:financialServicesCommittee",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "House Committee on Financial Services",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=committee_on_financial_services_meeting_feed",
+        "schema": "united_states_of_america",
+        "table": "committee_on_financial_services_meeting_feed",
+        "filters": []
+      },
+      {
+        "key": "us:economy:treasuryNews",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Department of Treasury News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": []
+      },
+      {
+        "key": "us:economy:treasuryDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Department of Treasury Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Treasury+Department&order_by=created_at&schema=united_states_of_america&table=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Treasury Department"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:laborNews",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Department of Labor News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=labor",
+        "schema": "united_states_of_america",
+        "table": "labor",
+        "filters": []
+      },
+      {
+        "key": "us:economy:laborDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Department of Labor Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Labor+Department&order_by=created_at&schema=united_states_of_america&table=labor",
+        "schema": "united_states_of_america",
+        "table": "labor",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Labor Department"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:economicAnalysisBureauDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Economic Analysis Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Economic+Analysis+Bureau&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Economic Analysis Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:censusDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Census Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Census+Bureau&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Census Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:minorityBusinessDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Minority Business Development Agency Documents",
+        "kind": "agency",
+        "params": "agency=Minority+Business+Development+Agency&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Minority Business Development Agency"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:nistDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "National Institute of Standards and Technology Documents",
+        "kind": "agency",
+        "params": "agency=National+Institute+of+Standards+and+Technology&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Institute of Standards and Technology"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:noaaDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "National Oceanic and Atmospheric Administration Documents",
+        "kind": "agency",
+        "params": "agency=National+Oceanic+and+Atmospheric+Administration&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Oceanic and Atmospheric Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:ntisDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "National Technical Information Service Documents",
+        "kind": "agency",
+        "params": "agency=National+Technical+Information+Service&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Technical Information Service"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:patentTrademarkDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Patent and Trademark Office Documents",
+        "kind": "agency",
+        "params": "agency=Patent+and+Trademark+Office&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Patent and Trademark Office"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:fiscalServiceDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Bureau of the Fiscal Service Documents",
+        "kind": "agency",
+        "params": "agency=Bureau+of+the+Fiscal+Service&table_name=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Bureau of the Fiscal Service"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:finCenDocuments",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Financial Crimes Enforcement Network Documents",
+        "kind": "agency",
+        "params": "agency=Financial+Crimes+Enforcement+Network&table_name=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Financial Crimes Enforcement Network"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:economicsStatistics",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Economics and Statistics Administration Documents",
+        "kind": "agency",
+        "params": "agency=Economics+and+Statistics+Administration&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Economics and Statistics Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:foreignAssetsControl",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Foreign Assets Control Office Documents",
+        "kind": "agency",
+        "params": "agency=Foreign+Assets+Control+Office&table_name=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Foreign Assets Control Office"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:irs",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Internal Revenue Service Documents",
+        "kind": "agency",
+        "params": "agency=Internal+Revenue+Service&table_name=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Internal Revenue Service"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:internationalInvestment",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "International Investment Office Documents",
+        "kind": "agency",
+        "params": "agency=International+Investment+Office&table_name=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "International Investment Office"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:publicDebt",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Public Debt Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Public+Debt+Bureau&table_name=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Public Debt Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:thriftSupervision",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Thrift Supervision Office Documents",
+        "kind": "agency",
+        "params": "agency=Thrift+Supervision+Office&table_name=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Thrift Supervision Office"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:veteransEmployment",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Veterans Employment and Training Service Documents",
+        "kind": "agency",
+        "params": "agency=Veterans+Employment+and+Training+Service&table_name=labor",
+        "schema": "united_states_of_america",
+        "table": "labor",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Veterans Employment and Training Service"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:councilOfEconomicAdvisers",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Council of Economic Advisers",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=council_of_economic_advisers",
+        "schema": "united_states_of_america",
+        "table": "council_of_economic_advisers",
+        "filters": []
+      },
+      {
+        "key": "us:economy:nationalEconomicCouncil",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "National Economic Council",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=national_economic_council",
+        "schema": "united_states_of_america",
+        "table": "national_economic_council",
+        "filters": []
+      },
+      {
+        "key": "us:economy:exportAdministration",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Export Administration Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Export+Administration+Bureau&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Export Administration Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:monetaryOffices",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Monetary Offices Documents",
+        "kind": "agency",
+        "params": "agency=Monetary+Offices&table_name=treasury",
+        "schema": "united_states_of_america",
+        "table": "treasury",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Monetary Offices"
+          }
+        ]
+      },
+      {
+        "key": "us:economy:travelTourism",
+        "country": "us",
+        "section": "economy",
+        "topic": "Economy",
+        "topicName": "EconomyNews",
+        "name": "Travel and Tourism Administration Documents",
+        "kind": "agency",
+        "params": "agency=Travel+and+Tourism+Administration&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Travel and Tourism Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:epa",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "EPA",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=epa",
+        "schema": "united_states_of_america",
+        "table": "epa",
+        "filters": []
+      },
+      {
+        "key": "us:environment:nationalWeatherServiceUpdate",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "National Weather Service Update",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=national_weather_service_update",
+        "schema": "united_states_of_america",
+        "table": "national_weather_service_update",
+        "filters": []
+      },
+      {
+        "key": "us:environment:nationalWeatherServicePredictions",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "National Weather Service Predictions",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=national_weather_service_predictions",
+        "schema": "united_states_of_america",
+        "table": "national_weather_service_predictions",
+        "filters": []
+      },
+      {
+        "key": "us:environment:noaaNews",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "National Oceanic and Atmospheric Administration",
+        "kind": "agency",
+        "params": "agency=National+Oceanic+and+Atmospheric+Administration&table_name=commerce",
+        "schema": "united_states_of_america",
+        "table": "commerce",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Oceanic and Atmospheric Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:nationalScienceFoundation",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "National Science Foundation Research News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=national_science_foundation",
+        "schema": "united_states_of_america",
+        "table": "national_science_foundation",
+        "filters": []
+      },
+      {
+        "key": "us:environment:nasa",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "NASA",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=nasa",
+        "schema": "united_states_of_america",
+        "table": "nasa",
+        "filters": []
+      },
+      {
+        "key": "us:environment:interiorNews",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Department of the Interior News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": []
+      },
+      {
+        "key": "us:environment:interiorDocuments",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Department of the Interior Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Interior+Department&order_by=created_at&schema=united_states_of_america&table=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Interior Department"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:agricultureNews",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Department of Agriculture News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=environment",
+        "schema": "united_states_of_america",
+        "table": "environment",
+        "filters": []
+      },
+      {
+        "key": "us:environment:agricultureDocuments",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Department of Agriculture Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Department+of+Agriculture&order_by=created_at&schema=united_states_of_america&table=environment",
+        "schema": "united_states_of_america",
+        "table": "environment",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Department of Agriculture"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:housingNews",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Department of Housing and Urban Development",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=housing_and_urban_development",
+        "schema": "united_states_of_america",
+        "table": "housing_and_urban_development",
+        "filters": []
+      },
+      {
+        "key": "us:environment:nationalParkService",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "National Park Service",
+        "kind": "agency",
+        "params": "agency=National+Park+Service&table_name=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Park Service"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:naturalResourcesRevenue",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Natural Resources Revenue Office Documents",
+        "kind": "agency",
+        "params": "agency=Natural+Resources+Revenue+Office&table_name=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Natural Resources Revenue Office"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:oceanEnergyManagement",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Ocean Energy Management Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Ocean+Energy+Management+Bureau&table_name=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Ocean Energy Management Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:oceanEnergyRegulation",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Ocean Energy Management, Regulation, and Enforcement Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Ocean+Energy+Management%2C+Regulation%2C+and+Enforcement+Bureau&table_name=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Ocean Energy Management, Regulation, and Enforcement Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:reclamationBureau",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Reclamation Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Reclamation+Bureau&table_name=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Reclamation Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:safetyEnvironmentEnforcement",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Safety and Environmental Enforcement Bureau Documents",
+        "kind": "agency",
+        "params": "agency=Safety+and+Environmental+Enforcement+Bureau&table_name=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Safety and Environmental Enforcement Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:surfaceMining",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Surface Mining Reclamation and Enforcement Office Documents",
+        "kind": "agency",
+        "params": "agency=Surface+Mining+Reclamation+and+Enforcement+Office&table_name=interior",
+        "schema": "united_states_of_america",
+        "table": "interior",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Surface Mining Reclamation and Enforcement Office"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:housingOversight",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Federal Housing Enterprise Oversight Office Documents",
+        "kind": "agency",
+        "params": "agency=Federal+Housing+Enterprise+Oversight+Office&table_name=hud",
+        "schema": "united_states_of_america",
+        "table": "hud",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Housing Enterprise Oversight Office"
+          }
+        ]
+      },
+      {
+        "key": "us:environment:gnma",
+        "country": "us",
+        "section": "environment",
+        "topic": "Environment",
+        "topicName": "EnvironmentNews",
+        "name": "Government National Mortgage Association Documents",
+        "kind": "agency",
+        "params": "agency=Government+National+Mortgage+Association&table_name=hud",
+        "schema": "united_states_of_america",
+        "table": "hud",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Government National Mortgage Association"
+          }
+        ]
+      },
+      {
+        "key": "us:foreignAffairs:stateNews",
+        "country": "us",
+        "section": "foreignAffairs",
+        "topic": "Foreign Affairs",
+        "topicName": "ForeignAffairsNews",
+        "name": "Department of State News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=state",
+        "schema": "united_states_of_america",
+        "table": "state",
+        "filters": []
+      },
+      {
+        "key": "us:foreignAffairs:stateDocuments",
+        "country": "us",
+        "section": "foreignAffairs",
+        "topic": "Foreign Affairs",
+        "topicName": "ForeignAffairsNews",
+        "name": "Department of State Documents",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Department+of+State+Documents&order_by=created_at&schema=united_states_of_america&table=state",
+        "schema": "united_states_of_america",
+        "table": "state",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Department of State Documents"
+          }
+        ]
+      },
+      {
+        "key": "us:foreignAffairs:defenseNews",
+        "country": "us",
+        "section": "foreignAffairs",
+        "topic": "Foreign Affairs",
+        "topicName": "ForeignAffairsNews",
+        "name": "Department of Defense News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": []
+      },
+      {
+        "key": "us:foreignAffairs:defenseDocuments",
+        "country": "us",
+        "section": "foreignAffairs",
+        "topic": "Foreign Affairs",
+        "topicName": "ForeignAffairsNews",
+        "name": "Department of Defense Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Defense+Department&order_by=created_at&schema=united_states_of_america&table=defense",
+        "schema": "united_states_of_america",
+        "table": "defense",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Defense Department"
+          }
+        ]
+      },
+      {
+        "key": "us:foreignAffairs:houseForeignAffairs",
+        "country": "us",
+        "section": "foreignAffairs",
+        "topic": "Foreign Affairs",
+        "topicName": "ForeignAffairsNews",
+        "name": "House Committee on Foreign Affairs",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=committee_on_foreign_affairs_meeting_feed",
+        "schema": "united_states_of_america",
+        "table": "committee_on_foreign_affairs_meeting_feed",
+        "filters": []
+      },
+      {
+        "key": "us:health:healthAndHumanServicesNews",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Health and Human Services News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": []
+      },
+      {
+        "key": "us:health:healthAndHumanServicesDocuments",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Health and Human Services Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Health+and+Human+Services+Department&order_by=created_at&schema=united_states_of_america&table=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Health and Human Services Department"
+          }
+        ]
+      },
+      {
+        "key": "us:health:agencyForHealthcareResearch",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Agency for Healthcare Research and Quality Documents",
+        "kind": "agency",
+        "params": "agency=Agency+for+Healthcare+Research+and+Quality&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Agency for Healthcare Research and Quality"
+          }
+        ]
+      },
+      {
+        "key": "us:health:agencyForToxicSubstances",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Agency for Toxic Substances and Disease Registry Documents",
+        "kind": "agency",
+        "params": "agency=Agency+for+Toxic+Substances+and+Disease+Registry&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Agency for Toxic Substances and Disease Registry"
+          }
+        ]
+      },
+      {
+        "key": "us:health:agingAdministration",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Aging Administration Documents",
+        "kind": "agency",
+        "params": "agency=Aging+Administration&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Aging Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:health:centersForDiseaseControl",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Centers for Disease Control and Prevention Documents",
+        "kind": "agency",
+        "params": "agency=Centers+for+Disease+Control+and+Prevention&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Centers for Disease Control and Prevention"
+          }
+        ]
+      },
+      {
+        "key": "us:health:childrenAndFamiliesAdministration",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Children and Families Administration Documents",
+        "kind": "agency",
+        "params": "agency=Children+and+Families+Administration&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Children and Families Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:health:communityLivingAdministration",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Community Living Administration Documents",
+        "kind": "agency",
+        "params": "agency=Community+Living+Administration&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Community Living Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:health:foodAndDrugAdministration",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Food and Drug Administration Documents",
+        "kind": "agency",
+        "params": "agency=Food+and+Drug+Administration&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Food and Drug Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:health:healthCareFinanceAdministration",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Health Care Finance Administration Documents",
+        "kind": "agency",
+        "params": "agency=Health+Care+Finance+Administration&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Health Care Finance Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:health:healthResourcesAndServicesAdministration",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Health Resources and Services Administration Documents",
+        "kind": "agency",
+        "params": "agency=Health+Resources+and+Services+Administration&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Health Resources and Services Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:health:indianHealthService",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Indian Health Service Documents",
+        "kind": "agency",
+        "params": "agency=Indian+Health+Service&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Indian Health Service"
+          }
+        ]
+      },
+      {
+        "key": "us:health:nationalInstitutesOfHealth",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "National Institutes of Health Documents",
+        "kind": "agency",
+        "params": "agency=National+Institutes+of+Health&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Institutes of Health"
+          }
+        ]
+      },
+      {
+        "key": "us:health:nationalLibraryOfMedicine",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "National Library of Medicine Documents",
+        "kind": "agency",
+        "params": "agency=National+Library+of+Medicine&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Library of Medicine"
+          }
+        ]
+      },
+      {
+        "key": "us:health:programSupportCenter",
+        "country": "us",
+        "section": "health",
+        "topic": "Health",
+        "topicName": "HealthNews",
+        "name": "Program Support Center Documents",
+        "kind": "agency",
+        "params": "agency=Program+Support+Center&table_name=health_and_human_services",
+        "schema": "united_states_of_america",
+        "table": "health_and_human_services",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Program Support Center"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:housingAndUrbanDevelopmentNews",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "HUD News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=housing_and_urban_development",
+        "schema": "united_states_of_america",
+        "table": "housing_and_urban_development",
+        "filters": []
+      },
+      {
+        "key": "us:infrastructure:housingAndUrbanDevelopmentDocuments",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "HUD Documents",
+        "kind": "table",
+        "params": "filter_column=collection_name&filter_string=Department+of+Housing+And+Urban+Development+Documents&order_by=created_at&schema=united_states_of_america&table=housing_and_urban_development",
+        "schema": "united_states_of_america",
+        "table": "housing_and_urban_development",
+        "filters": [
+          {
+            "column": "collection_name",
+            "value": "Department of Housing And Urban Development Documents"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:transportationDocuments",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Department of Transportation Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Transportation+Department&order_by=created_at&schema=united_states_of_america&table=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Transportation Department"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:energyDocuments",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Department of Energy Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Energy+Department&order_by=created_at&schema=united_states_of_america&table=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Energy Department"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:energyEfficiencyRenewable",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Energy Efficiency and Renewable Energy Office",
+        "kind": "agency",
+        "params": "agency=Energy+Efficiency+and+Renewable+Energy+Office&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Energy Efficiency and Renewable Energy Office"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:energyInformation",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Energy Information Administration",
+        "kind": "agency",
+        "params": "agency=Energy+Information+Administration&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Energy Information Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:energyResearch",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Energy Research Office",
+        "kind": "agency",
+        "params": "agency=Energy+Research+Office&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Energy Research Office"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:environmentEnergy",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Environment Office, Energy Department",
+        "kind": "agency",
+        "params": "agency=Environment+Office%2C+Energy+Department&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Environment Office, Energy Department"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:ferc",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Federal Energy Regulatory Commission",
+        "kind": "agency",
+        "params": "agency=Federal+Energy+Regulatory+Commission&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Energy Regulatory Commission"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:nnsa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "National Nuclear Security Administration",
+        "kind": "agency",
+        "params": "agency=National+Nuclear+Security+Administration&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Nuclear Security Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:commercialSpace",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Commercial Space Transportation Office",
+        "kind": "agency",
+        "params": "agency=Commercial+Space+Transportation+Office&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Commercial Space Transportation Office"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:faa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Federal Aviation Administration",
+        "kind": "agency",
+        "params": "agency=Federal+Aviation+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Aviation Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:federalHighway",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Federal Highway Administration",
+        "kind": "agency",
+        "params": "agency=Federal+Highway+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Highway Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:fmcsa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Federal Motor Carrier Safety Administration",
+        "kind": "agency",
+        "params": "agency=Federal+Motor+Carrier+Safety+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Motor Carrier Safety Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:federalRailroad",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Federal Railroad Administration",
+        "kind": "agency",
+        "params": "agency=Federal+Railroad+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Railroad Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:fta",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Federal Transit Administration",
+        "kind": "agency",
+        "params": "agency=Federal+Transit+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Transit Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:greatLakesSeaway",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Great Lakes St. Lawrence Seaway Development Corporation",
+        "kind": "agency",
+        "params": "agency=Great+Lakes+St.+Lawrence+Seaway+Development+Corporation&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Great Lakes St. Lawrence Seaway Development Corporation"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:maritime",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Maritime Administration",
+        "kind": "agency",
+        "params": "agency=Maritime+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Maritime Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:nhtsa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "National Highway Traffic Safety Administration",
+        "kind": "agency",
+        "params": "agency=National+Highway+Traffic+Safety+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Highway Traffic Safety Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:omcs",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Office of Motor Carrier Safety",
+        "kind": "agency",
+        "params": "agency=Office+of+Motor+Carrier+Safety&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Office of Motor Carrier Safety"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:phmsa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Pipeline and Hazardous Materials Safety Administration",
+        "kind": "agency",
+        "params": "agency=Pipeline+and+Hazardous+Materials+Safety+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Pipeline and Hazardous Materials Safety Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:rita",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Research and Innovative Technology Administration",
+        "kind": "agency",
+        "params": "agency=Research+and+Innovative+Technology+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Research and Innovative Technology Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:rspa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Research and Special Programs Administration",
+        "kind": "agency",
+        "params": "agency=Research+and+Special+Programs+Administration&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Research and Special Programs Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:tsb",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Transportation Statistics Bureau",
+        "kind": "agency",
+        "params": "agency=Transportation+Statistics+Bureau&table_name=transportation",
+        "schema": "united_states_of_america",
+        "table": "transportation",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Transportation Statistics Bureau"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:spa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Southeastern Power Administration",
+        "kind": "agency",
+        "params": "agency=Southeastern+Power+Administration&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Southeastern Power Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:swpa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Southwestern Power Administration",
+        "kind": "agency",
+        "params": "agency=Southwestern+Power+Administration&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Southwestern Power Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:wapa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Western Area Power Administration",
+        "kind": "agency",
+        "params": "agency=Western+Area+Power+Administration&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Western Area Power Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:apa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Alaska Power Administration",
+        "kind": "agency",
+        "params": "agency=Alaska+Power+Administration&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Alaska Power Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:infrastructure:bpa",
+        "country": "us",
+        "section": "infrastructure",
+        "topic": "Infrastructure",
+        "topicName": "InfrastructureNews",
+        "name": "Bonneville Power Administration",
+        "kind": "agency",
+        "params": "agency=Bonneville+Power+Administration&table_name=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Bonneville Power Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:justiceNews",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Department of Justice News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": []
+      },
+      {
+        "key": "us:justice:justiceDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Department of Justice Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Justice+Department&order_by=created_at&schema=united_states_of_america&table=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Justice Department"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:antitrustDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Antitrust Division",
+        "kind": "agency",
+        "params": "agency=Antitrust+Division&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Antitrust Division"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:deaDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Drug Enforcement Administration",
+        "kind": "agency",
+        "params": "agency=Drug+Enforcement+Administration&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Drug Enforcement Administration"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:fbiDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Federal Bureau of Investigation",
+        "kind": "agency",
+        "params": "agency=Federal+Bureau+of+Investigation&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Bureau of Investigation"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:fpiDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Federal Prison Industries",
+        "kind": "agency",
+        "params": "agency=Federal+Prison+Industries&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Federal Prison Industries"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:fcscDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Foreign Claims Settlement Commission",
+        "kind": "agency",
+        "params": "agency=Foreign+Claims+Settlement+Commission&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Foreign Claims Settlement Commission"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:jpoDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Justice Programs Office",
+        "kind": "agency",
+        "params": "agency=Justice+Programs+Office&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Justice Programs Office"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:jjdpoDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Juvenile Justice and Delinquency Prevention Office",
+        "kind": "agency",
+        "params": "agency=Juvenile+Justice+and+Delinquency+Prevention+Office&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Juvenile Justice and Delinquency Prevention Office"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:nicDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "National Institute of Corrections",
+        "kind": "agency",
+        "params": "agency=National+Institute+of+Corrections&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Institute of Corrections"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:nijDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "National Institute of Justice",
+        "kind": "agency",
+        "params": "agency=National+Institute+of+Justice&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "National Institute of Justice"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:pcDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "Parole Commission",
+        "kind": "agency",
+        "params": "agency=Parole+Commission&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Parole Commission"
+          }
+        ]
+      },
+      {
+        "key": "us:justice:usmsDocs",
+        "country": "us",
+        "section": "justice",
+        "topic": "Justice",
+        "topicName": "JusticeNews",
+        "name": "United States Marshals Service",
+        "kind": "agency",
+        "params": "agency=United+States+Marshals+Service&table_name=justice",
+        "schema": "united_states_of_america",
+        "table": "justice",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "United States Marshals Service"
+          }
+        ]
+      },
+      {
+        "key": "us:science:nsf",
+        "country": "us",
+        "section": "science",
+        "topic": "Science & Tech",
+        "topicName": "ScienceTechNews",
+        "name": "National Science Foundation",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=national_science_foundation",
+        "schema": "united_states_of_america",
+        "table": "national_science_foundation",
+        "filters": []
+      },
+      {
+        "key": "us:science:nasa",
+        "country": "us",
+        "section": "science",
+        "topic": "Science & Tech",
+        "topicName": "ScienceTechNews",
+        "name": "NASA",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=nasa",
+        "schema": "united_states_of_america",
+        "table": "nasa",
+        "filters": []
+      },
+      {
+        "key": "us:science:nasaJPL",
+        "country": "us",
+        "section": "science",
+        "topic": "Science & Tech",
+        "topicName": "ScienceTechNews",
+        "name": "NASA JPL News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=nasa_jpl",
+        "schema": "united_states_of_america",
+        "table": "nasa_jpl",
+        "filters": []
+      },
+      {
+        "key": "us:science:nist",
+        "country": "us",
+        "section": "science",
+        "topic": "Science & Tech",
+        "topicName": "ScienceTechNews",
+        "name": "NIST News",
+        "kind": "table",
+        "params": "order_by=created_at&schema=united_states_of_america&table=nist",
+        "schema": "united_states_of_america",
+        "table": "nist",
+        "filters": []
+      },
+      {
+        "key": "us:science:energyDepartment",
+        "country": "us",
+        "section": "science",
+        "topic": "Science & Tech",
+        "topicName": "ScienceTechNews",
+        "name": "Department of Energy Documents",
+        "kind": "table",
+        "params": "filter_column=agency&filter_string=Energy+Department&order_by=created_at&schema=united_states_of_america&table=energy",
+        "schema": "united_states_of_america",
+        "table": "energy",
+        "filters": [
+          {
+            "column": "agency",
+            "value": "Energy Department"
+          }
+        ]
+      },
+      {
+        "key": "us:regulations:rules",
+        "country": "us",
+        "section": "regulations",
+        "topic": "Regulations",
+        "topicName": "RegulationsNews",
+        "name": "Rules",
+        "kind": "table",
+        "params": "filter_column=document_type&filter_string=Rule&order_by=created_at&schema=united_states_of_america&table=regulations",
+        "schema": "united_states_of_america",
+        "table": "regulations",
+        "filters": [
+          {
+            "column": "document_type",
+            "value": "Rule"
+          }
+        ]
+      },
+      {
+        "key": "us:regulations:proposedRules",
+        "country": "us",
+        "section": "regulations",
+        "topic": "Regulations",
+        "topicName": "RegulationsNews",
+        "name": "Proposed Rules",
+        "kind": "table",
+        "params": "filter_column=document_type&filter_string=Proposed+Rule&order_by=created_at&schema=united_states_of_america&table=regulations",
+        "schema": "united_states_of_america",
+        "table": "regulations",
+        "filters": [
+          {
+            "column": "document_type",
+            "value": "Proposed Rule"
+          }
+        ]
+      },
+      {
+        "key": "us:regulations:supportingMaterials",
+        "country": "us",
+        "section": "regulations",
+        "topic": "Regulations",
+        "topicName": "RegulationsNews",
+        "name": "Supporting Materials",
+        "kind": "table",
+        "params": "filter_column=document_type&filter_string=Supporting+%26+Related+Material&order_by=created_at&schema=united_states_of_america&table=regulations",
+        "schema": "united_states_of_america",
+        "table": "regulations",
+        "filters": [
+          {
+            "column": "document_type",
+            "value": "Supporting & Related Material"
+          }
+        ]
+      },
+      {
+        "key": "us:regulations:notices",
+        "country": "us",
+        "section": "regulations",
+        "topic": "Regulations",
+        "topicName": "RegulationsNews",
+        "name": "Notices",
+        "kind": "table",
+        "params": "filter_column=document_type&filter_string=Notice&order_by=created_at&schema=united_states_of_america&table=regulations",
+        "schema": "united_states_of_america",
+        "table": "regulations",
+        "filters": [
+          {
+            "column": "document_type",
+            "value": "Notice"
+          }
+        ]
+      },
+      {
+        "key": "us:regulations:otherRegulations",
+        "country": "us",
+        "section": "regulations",
+        "topic": "Regulations",
+        "topicName": "RegulationsNews",
+        "name": "Other Regulations",
+        "kind": "table",
+        "params": "filter_column=document_type&filter_string=Other&order_by=created_at&schema=united_states_of_america&table=regulations",
+        "schema": "united_states_of_america",
+        "table": "regulations",
+        "filters": [
+          {
+            "column": "document_type",
+            "value": "Other"
+          }
+        ]
+      },
+      {
+        "key": "us:spending:recentAwards",
+        "country": "us",
+        "section": "spending",
+        "topic": "Spending",
+        "topicName": "SpendingNews",
+        "name": "Recent Awards",
+        "kind": "table",
+        "params": "order_by=start_date&schema=united_states_of_america&table=recent_awards",
+        "schema": "united_states_of_america",
+        "table": "recent_awards",
+        "filters": []
+      }
+    ]
+  }
