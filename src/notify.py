@@ -70,6 +70,7 @@ class SendFcmMessage:
 
     length_of_values is the total number of posts this notification covers.
     When it is greater than 1, the body ends with "and N more ..." text.
+    multiline=True keeps line breaks in the body (one headline per line).
     """
 
     def __init__(
@@ -82,6 +83,7 @@ class SendFcmMessage:
         data=None,
         condition=None,
         ending_note="",
+        multiline=False,
     ):
         if bool(topic) == bool(condition):
             raise ValueError("Provide exactly one of topic or condition")
@@ -94,6 +96,7 @@ class SendFcmMessage:
         # FCM data payloads must be a flat dict of strings.
         self.data = {str(k): "" if v is None else str(v) for k, v in (data or {}).items()}
         self.ending_note = ending_note or ""
+        self.multiline = multiline
         self.body = self.build_body(body or "")
 
     def count_suffix(self):
@@ -106,8 +109,15 @@ class SendFcmMessage:
         return f" and {extra} other posts are available to read"
 
     def build_body(self, body):
-        """Truncate the body so body + suffix never exceeds MAX_BODY_LENGTH."""
-        body = " ".join(body.split())  # collapse newlines and repeated spaces
+        """Truncate the body so body + suffix never exceeds MAX_BODY_LENGTH.
+
+        Newlines and repeated spaces are collapsed, unless multiline=True, which
+        keeps one line per headline and only tidies spaces within each line.
+        """
+        if self.multiline:
+            body = "\n".join(" ".join(line.split()) for line in body.splitlines() if line.strip())
+        else:
+            body = " ".join(body.split())
         suffix = self.count_suffix()
         limit = MAX_BODY_LENGTH - len(suffix)
         if len(body) > limit:

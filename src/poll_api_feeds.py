@@ -86,10 +86,17 @@ FUTURE_TOLERANCE = timedelta(hours=12)  # same rule as the app's dropFutureDated
 REQUEST_TIMEOUT = 20       # seconds
 WORKERS = 8                # feeds fetched at once
 
-# Combined (digest) message, used for the test topic.
-DIGEST_TITLE = "Gov Glance"
-DIGEST_PREVIEW_COUNT = 3   # posts embedded for the app's notification bubbles
-DIGEST_NAMED_TOPICS = 3    # topics named before "and N more"
+# Messages. A push with several new items leads with real headlines, one per
+# line, rather than topic names:
+#
+#     Executive: 5 new                      (live, one topic)
+#     12 new on Gov Glance                  (testing, every topic in one push)
+#     Executive Order on Federal Hiring
+#     HR. 11035 - Closing the Substance Use Care Gap Act of 2026
+#     and 3 more
+HEADLINES_SHOWN = 2        # headlines in the body
+HEADLINE_MAX = 100         # characters per headline before "..."
+PREVIEW_COUNT = 3          # posts embedded for the app's notification bubbles
 PREVIEW_FIELDS = ("title", "table_id", "table_source_name", "country_schema", "collection_name")
 
 # Envelope keys the app's extractPostsArray accepts, in its order.
@@ -316,58 +323,74 @@ def show_cache(state, feeds):
 # Messages
 # ---------------------------------------------------------------------------
 
-def join_names(names):
-    """['A', 'B', 'C'] -> 'A, B and C'; long lists end with 'and N more'."""
-    if len(names) > DIGEST_NAMED_TOPICS:
-        shown = names[:DIGEST_NAMED_TOPICS]
-        return f"{', '.join(shown)} and {len(names) - len(shown)} more"
-    if len(names) <= 2:
-        return " and ".join(names)
-    return f"{', '.join(names[:-1])} and {names[-1]}"
+def clip(text, limit):
+    text = " ".join(str(text or "").split())
+    return text if len(text) <= limit else text[: limit - 3].rstrip() + "..."
 
 
-def build_topic_message(entry, fcm_topic):
-    """The usual one-topic message ("Title ... and 4 other posts")."""
-    return build_message({"topic": entry["label"], "results": entry["rows"]}, fcm_topic)
+def headline_body(rows):
+    """The newest few headlines, one per line, then "and N more"."""
+    lines = [clip(row["title"], HEADLINE_MAX) for row in rows[:HEADLINES_SHOWN]]
+    extra = len(rows) - len(lines)
+    if extra > 0:
+        lines.append(f"and {extra} more")
+    return "\n".join(lines)
 
 
-def build_combined_message(news, fcm_topic):
-    """One message covering every topic with news.
+def preview_of(rows):
+    return [{key: to_data_value(row.get(key)) for key in PREVIEW_FIELDS} for row in rows[:PREVIEW_COUNT]]
 
-    One topic: the usual message. Several: "New in Legislative, Executive and
-    Justice: 28 new items", with data type "digest" so a tap opens the
-    dashboard without pinning a single topic.
+
+def headline_message(rows, title, data, fcm_topic):
+    """A multi-item push with headlines in the body and up to 3 posts embedded.
+
+    Embedded posts are dropped one at a time if the message would exceed FCM's
+    4KB limit; the headlines in the body are unaffected.
     """
-    if len(news) == 1:
-        (entry,) = news.values()
-        return build_topic_message(entry, fcm_topic)
-
-    # Busiest topics first, so the names shown are the ones with the most news.
-    ordered = sorted(news.values(), key=lambda entry: (-len(entry["rows"]), entry["label"]))
-    labels = [entry["label"] for entry in ordered]
-    total = sum(len(entry["rows"]) for entry in ordered)
-    body = f"New in {join_names(labels)}: {total} new item{'s' if total != 1 else ''}"
-
-    rows = [row for entry in ordered for row in entry["rows"]]
-    rows.sort(key=lambda row: row.get("_time") or OLDEST, reverse=True)
-    preview = [{key: to_data_value(row.get(key)) for key in PREVIEW_FIELDS}
-               for row in rows[:DIGEST_PREVIEW_COUNT]]
-
+    preview = preview_of(rows)
     while True:
-        data = {
-            "type": "digest",
-            "topics": ",".join(labels),
-            "schema": rows[0].get("country_schema") if rows else "",
-            "results": json.dumps(preview),
-        }
-        message = SendFcmMessage(notification_title=DIGEST_TITLE, body=body, data=data, topic=fcm_topic)
+        message = SendFcmMessage(
+            notification_title=title,
+            body=headline_body(rows),
+            data={**data, "results": json.dumps(preview)},
+            topic=fcm_topic,
+            multiline=True,
+        )
         if message.payload_size() <= MAX_PAYLOAD_SIZE or not preview:
             return message
         preview.pop()
 
 
+def build_topic_message(entry, fcm_topic):
+    """One topic's push. A single item reads as before (source, headline);
+    several lead with the newest headlines."""
+    rows = entry["rows"]
+    if len(rows) == 1:
+        return build_message({"topic": entry["label"], "results": rows}, fcm_topic)
+    data = {"type": "topic", "topic": entry["label"], "schema": rows[0].get("country_schema")}
+    return headline_message(rows, f"{entry['label']}: {len(rows)} new", data, fcm_topic)
+
+
+def build_combined_message(news, fcm_topic):
+    """One push covering every topic with news (the test topic).
+
+    One topic: that topic's message. Several: the newest headlines across all
+    of them, with data type "digest" so a tap opens the dashboard without
+    pinning a single topic.
+    """
+    if len(news) == 1:
+        (entry,) = news.values()
+        return build_topic_message(entry, fcm_topic)
+
+    rows = [row for entry in news.values() for row in entry["rows"]]
+    rows.sort(key=lambda row: row.get("_time") or OLDEST, reverse=True)
+    labels = sorted({entry["label"] for entry in news.values()})
+    data = {"type": "digest", "topics": ",".join(labels), "schema": rows[0].get("country_schema")}
+    return headline_message(rows, f"{len(rows)} new on Gov Glance", data, fcm_topic)
+
+
 def describe(message):
-    return f"{message.notification_title}: {message.body}"
+    return f"{message.notification_title} | {message.body.replace(chr(10), ' / ')}"
 
 
 # ---------------------------------------------------------------------------
