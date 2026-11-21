@@ -329,8 +329,20 @@ def clip(text, limit):
 
 
 def headline_body(rows):
-    """The newest few headlines, one per line, then "and N more"."""
-    lines = [clip(row["title"], HEADLINE_MAX) for row in rows[:HEADLINES_SHOWN]]
+    """The newest few distinct headlines, one per line, then "and N more".
+
+    Repeated titles ("Arms Sales Notification" nine times) are shown once; the
+    count still covers every item.
+    """
+    lines, seen = [], set()
+    for row in rows:
+        line = clip(row["title"], HEADLINE_MAX)
+        if line.lower() in seen:
+            continue
+        seen.add(line.lower())
+        lines.append(line)
+        if len(lines) == HEADLINES_SHOWN:
+            break
     extra = len(rows) - len(lines)
     if extra > 0:
         lines.append(f"and {extra} more")
@@ -382,7 +394,15 @@ def build_combined_message(news, fcm_topic):
         (entry,) = news.values()
         return build_topic_message(entry, fcm_topic)
 
-    rows = [row for entry in news.values() for row in entry["rows"]]
+    # An item can sit in several topics (a Defense document is also Executive and
+    # Foreign Affairs); count and show it once.
+    rows, seen = [], set()
+    for entry in news.values():
+        for row in entry["rows"]:
+            key = (row.get("table_source_name"), row.get("table_id"))
+            if key not in seen:
+                seen.add(key)
+                rows.append(row)
     rows.sort(key=lambda row: row.get("_time") or OLDEST, reverse=True)
     labels = sorted({entry["label"] for entry in news.values()})
     data = {"type": "digest", "topics": ",".join(labels), "schema": rows[0].get("country_schema")}
