@@ -7,9 +7,12 @@ shows and compares them with a cache of what the last run saw
     newest   the newest item seen so far: id, title, created_at
     seen     ids of the most recent items, for items that share a date
 
-An item is new when it isn't in `seen` and isn't older than the cached newest
-item. So an old item that shows up late (a backfill, a re-sorted feed) is never
-announced, and the cache always says what the newest item in each feed is.
+An item is new when it isn't in `seen` and isn't more than a day older than the
+cached newest item (LATE_GRACE). So an old item that shows up late (a backfill,
+a re-sorted feed) is never announced, but an item dated a day behind the newest
+still is: feeds such as the Federal Register publish dated tomorrow, and many
+feeds give only a date, so a strict "not older than newest" rule held back
+every item dated today once one dated tomorrow had been cached.
 
 Each topic with new items gets one push on its FCM topic ("ExecutiveNews",
 "CanadaJusticeNews", ...). In testing (no --live) everything goes as ONE
@@ -86,6 +89,7 @@ ITEMS_PER_FEED = 10        # newest items requested from each feed
 SEEN_PER_FEED = 100        # ids remembered per feed
 DEFAULT_MAX_AGE_DAYS = 2   # new-to-us items older than this aren't announced
 FUTURE_TOLERANCE = timedelta(hours=12)  # same rule as the app's dropFutureDated
+LATE_GRACE = timedelta(days=1)          # how far behind the cached newest an item may be dated
 REQUEST_TIMEOUT = 20       # seconds
 WORKERS = 8                # feeds fetched at once
 
@@ -496,8 +500,8 @@ def find_new_items(feed, items, entry, args, now):
         else:
             if identifier in seen:
                 continue
-            if newest_start and end and end < newest_start:
-                # Older than the newest item already cached: a late or re-sorted item.
+            if newest_start and end and end < newest_start - LATE_GRACE:
+                # Well behind the newest item already cached: a late or re-sorted item.
                 log.debug("skip %s #%s: older than cached newest (%s)", feed["key"], identifier, raw_date)
                 continue
             if end and end < cutoff:
@@ -528,7 +532,7 @@ def main():
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
-                        format="%(levelname)s %(message)s")
+                        format="%(asctime)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
 
     feeds = load_feeds(args.feeds)
     if args.only_topic:
