@@ -32,9 +32,16 @@ BRANCH_TOPICS = {
     "infrastructure": "InfrastructureNews",
     "regulations": "RegulationsNews",
     "justice": "JusticeNews",
+    "cyber": "CyberNews",
 }
 
 DEFAULT_TOPIC = "GovGlanceNews"
+
+# The new notification system sends to versioned topics ("v2-ExecutiveNews").
+# App versions from before it are subscribed to the plain names and never get
+# these pushes; app versions with it leave the plain names on first launch.
+# Must match TOPIC_VERSION in the app's notificationTopics.js.
+TOPIC_VERSION = "v2-"
 
 
 def country_code(schema):
@@ -62,9 +69,10 @@ def country_code(schema):
 
 
 def build_push_topic(branch, country="us"):
-    """Return the FCM topic for a branch and country, or None if the country has no topics."""
+    """Return the FCM topic for a branch and country ("v2-ExecutiveNews"), or
+    None if the country has no topics."""
     code = country_code(country)
     if code is None:
         return None
     name = BRANCH_TOPICS.get((branch or "").strip().lower(), DEFAULT_TOPIC)
-    return f"{COUNTRY_PREFIXES[code]}{name}"
+    return f"{TOPIC_VERSION}{COUNTRY_PREFIXES[code]}{name}"

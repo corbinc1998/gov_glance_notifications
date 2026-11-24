@@ -14,9 +14,9 @@ Everything lives in its own folder, separate from `gov_glance_spiders`.
 | Cache (not in git) | `/root/gov_glance_notifications/src/feed_state.json` |
 | Log | `/root/gov_glance_notifications/src/poll.log` |
 
-Test topic: `3.6.2_test`. Without `--live`, every run sends one combined push there,
-titled "12 new on Gov Glance" with the two newest headlines in the body. Live,
-each topic gets its own push titled "Executive: 5 new", also with headlines.
+Test topic: `3.6.2_test`. Without `--live`, every run sends one combined push there;
+live, each topic gets its own push. Either way the newest headline is the title,
+and the body reads "Also new: <next headline>" and "+N more updates".
 
 ---
 
@@ -187,7 +187,7 @@ cd /root/gov_glance_notifications/src
 |---|---|
 | (default, with `--live`) | Every install from the release with update notifications onward (`AppUpdates` topic) |
 | `--live --only-versions 3.6.1,3.6.2` | Only devices still on those versions |
-| `--live --legacy` | Installs from before update notifications existed, via their Legislative/Executive/Judicial topics. Use once, for the first update after that release |
+| `--live --legacy` | Only installs from before this release, via the plain topic names their old onboarding gave them (`LegislativeNews`, ...). Updated installs leave those names on first launch |
 | `--title "..." --body "..."` | Custom text (default: "Gov Glance 3.7.0 is available" / "Update now for the latest features and fixes.") |
 
 ---

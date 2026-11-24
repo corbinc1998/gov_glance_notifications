@@ -17,11 +17,11 @@ Audiences (with --live):
     --only-versions  just devices running these versions, for example
                      everyone not yet on the new one.
     --legacy         installs from before this release, which never joined
-                     "AppUpdates". They are reached through the topics the old
-                     onboarding subscribed them to (Legislative, Executive,
-                     Judicial, per country), so someone on the new version who
-                     follows those topics gets it too. Use it for the first
-                     update after this release, then switch to the default.
+                     "AppUpdates". They are reached through the plain topic
+                     names the old onboarding subscribed them to
+                     ("LegislativeNews", "ExecutiveNews", "JudicialNews", per
+                     country). New versions leave those names on first launch
+                     (they use "v2-..." topics), so only old installs get it.
 
 --live asks you to type SEND before anything goes out (skip with --yes).
 """
@@ -90,7 +90,8 @@ def plan(args):
         # A device is on one version topic, so no one gets two of these.
         return [build(args, condition=condition_for(group)) for group in chunks(topics, MAX_CONDITION_TOPICS)]
     if args.legacy:
-        # One per country. Someone following topics in two countries gets two.
+        # One per country, to the plain pre-v2 names only old installs are still
+        # on. Someone following topics in two countries gets two.
         return [build(args, condition=condition_for(topics)) for topics in LEGACY_TOPICS.values()]
     return [build(args, topic=UPDATE_TOPIC)]
 

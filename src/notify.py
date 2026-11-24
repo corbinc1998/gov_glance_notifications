@@ -97,6 +97,9 @@ class SendFcmMessage:
         self.data = {str(k): "" if v is None else str(v) for k, v in (data or {}).items()}
         self.ending_note = ending_note or ""
         self.multiline = multiline
+        # Set to an FCM registration token to send this message to that one
+        # device instead of its topic or condition (testing).
+        self.token = None
         self.body = self.build_body(body or "")
 
     def count_suffix(self):
@@ -151,8 +154,9 @@ class SendFcmMessage:
                 image=self.image,
             ),
             data=self.data or None,
-            topic=self.topic,
-            condition=self.condition,
+            token=self.token,
+            topic=None if self.token else self.topic,
+            condition=None if self.token else self.condition,
         )
 
     def send_notification(self, dry_run=False, raise_on_error=True):
@@ -162,7 +166,7 @@ class SendFcmMessage:
         that delete rows after sending never delete rows that weren't sent.
         With raise_on_error=False it returns False instead. Returns True on success.
         """
-        target = self.topic or self.condition
+        target = f"device {self.token[:12]}..." if self.token else (self.topic or self.condition)
         try:
             response = messaging.send(self.build_message(), dry_run=dry_run)
         except (exceptions.FirebaseError, ValueError) as error:

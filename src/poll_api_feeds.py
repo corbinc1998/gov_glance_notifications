@@ -23,6 +23,9 @@ combined push to the test topic: "New in Executive, Justice and Legislative:
     python poll_api_feeds.py --since-hours 24          # treat the last day's items as new (testing)
     python poll_api_feeds.py --live                    # real users
     python poll_api_feeds.py --show-cache              # print each feed's cached newest item
+    python poll_api_feeds.py --since-hours 24 --token <FCM token>
+                                                       # the live pushes, one per topic, sent to
+                                                       # one phone only; saves nothing
 
 The first run for each feed only fills the cache, so existing items are never
 announced. Run it hourly from cron once it works:
@@ -511,6 +514,8 @@ def main():
                         help=f"testing: send one combined push to this topic (default: {TEST_TOPIC})")
     target.add_argument("--live", action="store_true", help="send to the real per-topic FCM topics")
     parser.add_argument("--dry-run", action="store_true", help="show what would be sent; send and save nothing")
+    parser.add_argument("--token", default=None,
+                        help="send the --live pushes (one per topic) to this one device only; saves nothing")
     parser.add_argument("--probe", action="store_true", help="fetch one feed and print the response, then stop")
     parser.add_argument("--show-cache", action="store_true", help="print each feed's cached newest item, then stop")
     parser.add_argument("--only-topic", default=None, help="only check this topic (e.g. Executive)")
@@ -617,7 +622,7 @@ def main():
 
     # Build the pushes: one per FCM topic live, one combined push when testing.
     sends = []  # (message, FCM topics it covers)
-    if news and args.live:
+    if news and (args.live or args.token):
         for fcm_topic, entry in news.items():
             sends.append((build_topic_message(entry, fcm_topic), {fcm_topic}))
     elif news:
@@ -627,6 +632,8 @@ def main():
     if sends and not args.dry_run:
         InitFirebaseApp()
     for message, covers in sends:
+        if args.token:
+            message.token = args.token
         if args.dry_run:
             print(f"  {message.topic} <- {describe(message)}")
         elif message.send_notification(raise_on_error=False):
@@ -635,8 +642,9 @@ def main():
         else:
             log.error("Send to %s failed; its items will be retried next run", message.topic)
 
-    # New items go in the cache once their push went out.
-    if not args.dry_run:
+    # New items go in the cache once their push went out. A --token test goes to
+    # one phone only, so it leaves the cache alone for the real sends.
+    if not args.dry_run and not args.token:
         for fcm_topic, entry in news.items():
             if fcm_topic in delivered:
                 for feed_key, items in pending_cache[entry["label"]].items():
