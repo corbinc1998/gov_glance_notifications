@@ -86,16 +86,16 @@ FUTURE_TOLERANCE = timedelta(hours=12)  # same rule as the app's dropFutureDated
 REQUEST_TIMEOUT = 20       # seconds
 WORKERS = 8                # feeds fetched at once
 
-# Messages. A push with several new items leads with real headlines, one per
-# line, rather than topic names:
+# Messages lead with the news itself, never a topic name. The newest headline
+# is the title; the body has the next distinct headline and how many more:
 #
-#     Executive: 5 new                      (live, one topic)
-#     12 new on Gov Glance                  (testing, every topic in one push)
-#     Executive Order on Federal Hiring
-#     HR. 11035 - Closing the Substance Use Care Gap Act of 2026
-#     and 3 more
-HEADLINES_SHOWN = 2        # headlines in the body
-HEADLINE_MAX = 100         # characters per headline before "..."
+#     HR. 2347 - Bipartisan American Affordability and Jobs Act of 2026
+#     Also new: SRES. 965 - Congratulating the Milwaukee Brewers...
+#     +10 more updates
+#
+# A single item: its headline as the title, its source as the body.
+TITLE_MAX = 110            # characters in the title before "..."
+HEADLINE_MAX = 100         # characters of the second headline before "..."
 PREVIEW_COUNT = 3          # posts embedded for the app's notification bubbles
 PREVIEW_FIELDS = ("title", "table_id", "table_source_name", "country_schema", "collection_name")
 
@@ -189,6 +189,12 @@ def fetch_feed(feed):
 # ---------------------------------------------------------------------------
 # Items
 # ---------------------------------------------------------------------------
+
+def humanize_name(name):
+    """Split run-together feed names ("BillsEnrolled" -> "Bills Enrolled")."""
+    name = str(name or "").strip()
+    return name if " " in name else re.sub(r"([a-z])([A-Z])", r"\1 \2", name)
+
 
 def item_id(item):
     value = item.get("id")
@@ -328,42 +334,55 @@ def clip(text, limit):
     return text if len(text) <= limit else text[: limit - 3].rstrip() + "..."
 
 
-def headline_body(rows):
-    """The newest few distinct headlines, one per line, then "and N more".
-
-    Repeated titles ("Arms Sales Notification" nine times) are shown once; the
-    count still covers every item.
-    """
+def distinct_headlines(rows, limit):
+    """The newest `limit` headlines, skipping repeats ("Arms Sales Notification" x9)."""
     lines, seen = [], set()
     for row in rows:
-        line = clip(row["title"], HEADLINE_MAX)
-        if line.lower() in seen:
+        text = " ".join(str(row.get("title") or "").split())
+        if not text or text.lower() in seen:
             continue
-        seen.add(line.lower())
-        lines.append(line)
-        if len(lines) == HEADLINES_SHOWN:
+        seen.add(text.lower())
+        lines.append(text)
+        if len(lines) == limit:
             break
-    extra = len(rows) - len(lines)
+    return lines
+
+
+def more_line(count):
+    return f"+{count} more update{'s' if count != 1 else ''}"
+
+
+def headline_text(rows):
+    """(title, body) for a push covering `rows`, newest first."""
+    if len(rows) == 1:
+        row = rows[0]
+        return clip(row.get("title"), TITLE_MAX), row.get("collection_name") or "Gov Glance"
+    lead, *rest = distinct_headlines(rows, 2) or ["Gov Glance"]
+    lines = []
+    if rest:
+        lines.append(f"Also new: {clip(rest[0], HEADLINE_MAX)}")
+    extra = len(rows) - 1 - len(rest)
     if extra > 0:
-        lines.append(f"and {extra} more")
-    return "\n".join(lines)
+        lines.append(more_line(extra))
+    return clip(lead, TITLE_MAX), "\n".join(lines)
 
 
 def preview_of(rows):
     return [{key: to_data_value(row.get(key)) for key in PREVIEW_FIELDS} for row in rows[:PREVIEW_COUNT]]
 
 
-def headline_message(rows, title, data, fcm_topic):
-    """A multi-item push with headlines in the body and up to 3 posts embedded.
+def headline_message(rows, data, fcm_topic):
+    """A push led by headlines (headline_text), with up to 3 posts embedded.
 
     Embedded posts are dropped one at a time if the message would exceed FCM's
     4KB limit; the headlines in the body are unaffected.
     """
+    title, body = headline_text(rows)
     preview = preview_of(rows)
     while True:
         message = SendFcmMessage(
             notification_title=title,
-            body=headline_body(rows),
+            body=body,
             data={**data, "results": json.dumps(preview)},
             topic=fcm_topic,
             multiline=True,
@@ -374,13 +393,22 @@ def headline_message(rows, title, data, fcm_topic):
 
 
 def build_topic_message(entry, fcm_topic):
-    """One topic's push. A single item reads as before (source, headline);
-    several lead with the newest headlines."""
+    """One topic's push, led by its newest headline.
+
+    A single item keeps the item payload (a tap opens that post); the topic
+    name only goes in the data, for the dashboard, never in the text.
+    """
     rows = entry["rows"]
     if len(rows) == 1:
-        return build_message({"topic": entry["label"], "results": rows}, fcm_topic)
+        message = build_message({"topic": entry["label"], "results": rows}, fcm_topic)
+        message.notification_title, message.body = headline_text(rows)
+        # The app's dashboard bubble reads these instead of guessing from the
+        # notification text.
+        message.data["title"] = to_data_value(rows[0].get("title"))
+        message.data["source"] = to_data_value(rows[0].get("collection_name"))
+        return message
     data = {"type": "topic", "topic": entry["label"], "schema": rows[0].get("country_schema")}
-    return headline_message(rows, f"{entry['label']}: {len(rows)} new", data, fcm_topic)
+    return headline_message(rows, data, fcm_topic)
 
 
 def build_combined_message(news, fcm_topic):
@@ -406,7 +434,7 @@ def build_combined_message(news, fcm_topic):
     rows.sort(key=lambda row: row.get("_time") or OLDEST, reverse=True)
     labels = sorted({entry["label"] for entry in news.values()})
     data = {"type": "digest", "topics": ",".join(labels), "schema": rows[0].get("country_schema")}
-    return headline_message(rows, f"{len(rows)} new on Gov Glance", data, fcm_topic)
+    return headline_message(rows, data, fcm_topic)
 
 
 def describe(message):
@@ -569,7 +597,7 @@ def main():
                 "table_id": identifier,
                 "table_source_name": table,
                 "country_schema": feed.get("schema") or "united_states_of_america",
-                "collection_name": feed.get("name") or table.replace("_", " ").title(),
+                "collection_name": humanize_name(feed.get("name")) or table.replace("_", " ").title(),
                 "image_url": image_of(item),
                 "_time": item_time(item)[0] or OLDEST,
                 "_date": item.get("created_at"),
